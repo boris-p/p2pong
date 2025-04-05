@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    @apply font-sans antialiased text-white bg-[#242424];
+  }
+  
+  body {
+    @apply m-0 flex items-center min-h-screen min-w-[320px];
+  }
+  
+  a {
+    @apply font-medium text-[#646cff] no-underline hover:text-[#535bf2];
+  }
+  
+  h1 {
+    @apply text-[3.2em] leading-[1.1];
+  }
+  
+  button {
+    @apply rounded-lg border border-transparent px-[1.2em] py-[0.6em] text-base font-medium 
+           bg-[#1a1a1a] cursor-pointer transition-colors duration-250 
+           hover:border-[#646cff] focus:outline-[#646cff];
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    @apply text-[#213547] bg-white;
+  }
+  
+  button {
+    @apply bg-[#f9f9f9];
+  }
+}
